@@ -1,0 +1,103 @@
+#############################
+#            ***            #
+#     ***  PIXMAPS  ***     #
+#            ***            #
+#############################
+style "scrolled"			
+{
+	xthickness				= 1
+	ythickness				= 1
+
+	engine "pixmap"
+	{
+		image 
+		{
+			function        	= SHADOW
+			recolorable	= TRUE
+			file            	= "/images/scrolledWindow.png"
+			border          	= { 3, 3, 3, 3}
+			stretch         	= TRUE
+		}
+	}
+}
+widget_class "*<GtkScrolledWindow>"		style "scrolled"
+class "GtkScrolledWindow"		style "scrolled"
+
+
+style "scrolledwindow-vieport-fix" {
+	engine "pixmap" {
+		#image {
+		#	function	= SHADOW
+		#}		
+			image
+	{
+		function	= FLAT_BOX
+		recolorable	= TRUE
+		file		= "/images/null.png"
+		border		= { 6, 6 , 6 , 6 }
+		stretch		= TRUE
+	}
+	}
+}
+
+class "<GtkScrolledWindow>.<GtkViewport>"		style "scrolledwindow-vieport-fix"
+
+#############################
+#          TOOLBAR          #
+#############################
+
+style "toolbar"  {
+	xthickness				= 2
+	ythickness				= 4
+
+	  
+engine "pixmap"
+{
+
+	image
+	{
+		function	= BOX
+		recolorable	= TRUE
+		file		= "/images/WindowBg.png" #"/images/ToolbarBg.png
+		border		= { 0 , 0 , 0 , 0 }
+		stretch		= FALSE
+			overlay_file    	= "/images/toolbar-border2.png" #"/images/toolbar-border.png"
+            overlay_border 		= {6, 6, 6, 6}
+            overlay_stretch 	= TRUE
+	}
+
+	
+	
+}
+}
+
+
+class "GtkToolbar"			style 		"toolbar"
+class "*<GtkToolbar>*"		style 		"toolbar"
+
+
+#############################
+#         MENU-BAR          #
+#############################
+style "menubar" = "theme-default" {
+
+  xthickness = 0
+  ythickness = 0
+  
+	bg_pixmap[NORMAL] = "/images/WindowBg.png"
+  
+  engine "pixmap"
+{
+
+	image
+	{
+		function	= BOX
+		recolorable	= TRUE
+		state		= NORMAL
+		file		= "/images/WindowBg.png"
+		border		= { 0 ,0 , 0 ,0}
+		stretch		= FALSE
+	}
+}
+}
+widget_class "*<GtkMenuBar>*"			style        "menubar"

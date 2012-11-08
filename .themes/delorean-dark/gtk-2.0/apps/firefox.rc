@@ -1,0 +1,69 @@
+####  Firefox  ###
+style "firefox-base-entry" {
+  GtkWidget::interior_focus	= 0
+GtkWidget::cursor-color = "#006AA8"
+GtkWidget::secondary-cursor-color = "#ffffff"
+  	#GtkEntry	:: inner-border			= { 0, 0, 0, 0 }
+        #GtkEntry	:: progress-border		= { 2, 2, 2, 2 }
+  #xthickness 	= 6
+  #ythickness 	= 6
+
+	  base[NORMAL] 		= "#3c3c3c"
+	  base[INSENSITIVE]	= "#2f2f2f"
+	  text[NORMAL]     	= @fg_color
+	  fg[NORMAL]     	= @fg_color
+	  bg[PRELIGHT] 		= @bg_color
+}
+
+
+style "firefox-entry"  		= 	"firefox-base-entry" {
+GtkWidget::interior_focus	= 0
+  xthickness 	= 2
+  ythickness 	= 2
+
+	  engine "pixmap"
+{
+
+	image
+		{
+			function		= FOCUS
+			recolorable		= TRUE
+			file			= "images/firefox-entry.png"
+			border			= { 8,8,8,8}
+			stretch			= TRUE
+				overlay_file    	= "/images/entry-focus.png"
+                overlay_border 		= {3,3,3,3}
+                overlay_stretch 	= TRUE
+		}
+
+	image
+	{
+		function		= SHADOW
+		detail			= "entry"
+		shadow			= IN
+		recolorable		= TRUE
+		file			= "/images/firefox-entry.png"
+		border			= { 8,8,8,8}
+		state			= NORMAL
+		stretch			= TRUE
+		
+	}
+
+image
+		{
+			function		= FLAT_BOX
+			recolorable		= TRUE
+			shadow			= OUT
+			state			= NORMAL
+			file			= "/images/firefox-entry.png"
+			border			= { 8,8,8,8}
+			stretch			= TRUE
+		}
+
+
+	
+	
+}
+}
+
+widget	"MozillaGtkWidget*GtkFixed*GtkEntry*"	style:highest	"firefox-base-entry"
