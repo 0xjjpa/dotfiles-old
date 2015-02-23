@@ -21,11 +21,20 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" Allow saving of files as sudo when I forgot to start vim using sudo."
+cmap w!! w !sudo tee > /dev/null %
+
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
   set backup		" keep a backup file (restore to previous version)
+  set backupdir=~/tmp
   set undofile		" keep an undo file (undo changes after closing)
+  set undodir=~/tmp
 endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
