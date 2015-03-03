@@ -17,6 +17,18 @@ endif
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Plugin Loading through vundle 
+call vundle#begin()
+
+" Nginx conf files highlightin
+Plugin 'nginx.vim'
+
+call vundle#end()
+
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -26,7 +38,7 @@ set shiftwidth=2
 set expandtab
 
 " Allow saving of files as sudo when I forgot to start vim using sudo."
-cmap w!! w !sudo tee > /dev/null %
+ cmap w!! w !sudo tee > /dev/null %
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
