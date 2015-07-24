@@ -32,6 +32,7 @@ call vundle#end()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+set clipboard=unnamed
 
 set tabstop=2
 set shiftwidth=2
