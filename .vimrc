@@ -29,6 +29,8 @@ Plugin 'nginx.vim'
 
 call vundle#end()
 
+" Set handlebars as html
+autocmd BufNewFile,BufRead *.hbs  set syntax=html
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
