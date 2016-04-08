@@ -77,6 +77,12 @@ if has('mouse')
   set mouse=a
 endif
 
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
+
+
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
