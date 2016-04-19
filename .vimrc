@@ -26,6 +26,7 @@ call vundle#begin()
 
 " Nginx conf files highlightin
 Plugin 'nginx.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 
@@ -131,3 +132,7 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+syntax enable
+set background=dark
+colorscheme solarized
