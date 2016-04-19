@@ -82,3 +82,6 @@ export GOPATH=$HOME/golang
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 DEFAULT_USER=jaguinaga
+
+export NVM_DIR="/Users/jaguinaga/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
