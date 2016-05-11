@@ -27,6 +27,8 @@ call vundle#begin()
 " Nginx conf files highlightin
 Plugin 'nginx.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 
