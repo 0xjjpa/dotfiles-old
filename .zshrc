@@ -86,4 +86,4 @@ DEFAULT_USER=jaguinaga
 export NVM_DIR="/Users/jaguinaga/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-alias jpa='curl plaid.webscript.io/jose | xargs -I %'
+alias jpa='echo 🐺| xargs -I %'
