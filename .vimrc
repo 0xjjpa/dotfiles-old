@@ -28,7 +28,9 @@ call vundle#begin()
 Plugin 'nginx.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'pangloss/vim-javascript'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'mxw/vim-jsx'
+Plugin 'groenewege/vim-less'
 
 call vundle#end()
 
@@ -42,6 +44,9 @@ set clipboard=unnamed
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+"see numbers
+set nu
 
 "folding settings
 set foldmethod=indent   "fold based on indent
@@ -84,6 +89,20 @@ endif
 set textwidth=80
 set colorcolumn=+1
 
+" Switch between relative and number
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
+" Change to absolute on focus lost
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
 
 
 " Switch syntax highlighting on, when the terminal has colors
