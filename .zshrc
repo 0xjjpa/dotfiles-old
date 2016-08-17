@@ -87,4 +87,5 @@ export NVM_DIR="/Users/$DEFAULT_USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 alias jpa='echo 🐺| xargs -I %'
+alias vim='/usr/local/bin/vim'
 
