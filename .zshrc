@@ -81,9 +81,10 @@ export GOPATH=$HOME/golang
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-DEFAULT_USER=jaguinaga
+source ~/.company
 
-export NVM_DIR="/Users/jaguinaga/.nvm"
+export NVM_DIR="/Users/$DEFAULT_USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 alias jpa='echo 🐺| xargs -I %'
+
