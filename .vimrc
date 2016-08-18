@@ -31,6 +31,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'groenewege/vim-less'
+Plugin 'wincent/command-t'
+Plugin 'scrooloose/syntastic'
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 
@@ -104,6 +107,14 @@ nnoremap <C-n> :call NumberToggle()<cr>
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
 
+" Typescript setup
+let g:syntastic_typescript_checkers = ['tslint', 'tsc']
+let g:syntastic_typescript_tsc_fname = ''
+let g:syntastic_enable_signs=1     " enables error reporting in the gutter
+let g:syntastic_auto_loc_list=1    " when there are errors, show the quickfix window that lists those errors
+
+" Explorer mode for filetreeing
+let g:netrw_liststyle=3
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.

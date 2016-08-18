@@ -89,3 +89,5 @@ export NVM_DIR="/Users/$DEFAULT_USER/.nvm"
 alias jpa='echo 🐺| xargs -I %'
 alias vim='/usr/local/bin/vim'
 
+export VISUAL=vim
+
