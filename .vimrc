@@ -49,7 +49,7 @@ set shiftwidth=2
 set expandtab
 
 "see numbers
-set nu
+set number
 
 "folding settings
 set foldmethod=indent   "fold based on indent
@@ -106,6 +106,8 @@ nnoremap <C-n> :call NumberToggle()<cr>
 " Change to absolute on focus lost
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
+
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 " Typescript setup
 let g:syntastic_typescript_checkers = ['tslint', 'tsc']
