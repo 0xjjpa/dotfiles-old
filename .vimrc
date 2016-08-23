@@ -26,14 +26,33 @@ call vundle#begin()
 
 " Nginx conf files highlightin
 Plugin 'nginx.vim'
+
+" Theme
 Plugin 'altercation/vim-colors-solarized'
+
+" Javascript (duh)
 Plugin 'pangloss/vim-javascript'
+
+" Typescript (duh)
 Plugin 'leafgarland/typescript-vim'
+
+" JSX Magic cause DOM is so 2015
 Plugin 'mxw/vim-jsx'
+
+" LESS (duh)
 Plugin 'groenewege/vim-less'
+
+" Search on stereoids
 Plugin 'wincent/command-t'
+
+" Syntax linting
 Plugin 'scrooloose/syntastic'
+
+" Use .editorconfig files in repos to avoid being “that” guy
 Plugin 'editorconfig/editorconfig-vim'
+
+" Git within vim
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
@@ -44,12 +63,16 @@ autocmd BufNewFile,BufRead *.hbs  set syntax=html
 set backspace=indent,eol,start
 set clipboard=unnamed
 
+" :vsplit makes everything al-right
+set splitright
+
+
 set tabstop=2
 set shiftwidth=2
 set expandtab
 
 "see numbers
-set number
+set relativenumber
 
 "folding settings
 set foldmethod=indent   "fold based on indent
